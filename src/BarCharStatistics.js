@@ -32,8 +32,8 @@ const BarCharStatistics = () => {
   return (
     
     <BarChart
-    width={500}
-    height={300}
+    width={1500}
+    height={600}
     data={factMeasurements}
     margin={{
       top: 5,
@@ -43,12 +43,13 @@ const BarCharStatistics = () => {
     }}
   >
     <CartesianGrid strokeDasharray="3 3" />
-    <XAxis dataKey="timestamp" />
+    <XAxis dataKey="timestamp"
+    interval={15} />
     <YAxis />
     <Tooltip shared={false} trigger="click" />
     <Legend />
     <Bar dataKey="Temperature" fill="#8884d8" />
-    <Bar dataKey="CO2" fill="#82ca9d" />
+    <Bar dataKey="Humidity" fill="#82ca9d" />
   </BarChart>
 
   );

@@ -27,7 +27,7 @@ const LineCharStatistics = () => {
   }, []);
 
   return (
-    <LineChart width={600} height={300} data={factMeasurements}>
+    <LineChart width={1600} height={300} data={factMeasurements}>
       <Line type="monotone" dataKey="Temperature" stroke="#2196F3" strokeWidth={3} />
       <Line
         type="monotone"
@@ -37,7 +37,9 @@ const LineCharStatistics = () => {
       />
       <Line type="monotone" dataKey="Light" stroke="#FFCA29" strokeWidth={3} />
       <CartesianGrid stroke="#ccc" />
-      <XAxis dataKey="timestamp" />
+      <XAxis dataKey="timestamp" 
+        interval={15}
+      />
       <YAxis />
       <Tooltip />
       <Legend />
